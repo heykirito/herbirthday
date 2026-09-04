@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, My Love ✦</title>
+  <meta name="description" content="A special birthday sanctuary celebrating you, our memories, and every moment yet to come.">
+
+  <!-- Favicon Heart -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans, Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Canvas Background (Soft Bokeh & Stardust) -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Celebration Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="site-wrapper">
+
+    <!-- Top Floating Header -->
+    <header class="site-header">
+      <a href="#" class="header-brand">
+        <span class="brand-heart">♥</span>
+        <span>our chapter</span>
+      </a>
+
+      <!-- Ambient Audio Controller -->
+      <button id="music-toggle" class="music-control-btn" aria-label="Toggle ambient music">
+        <div class="music-bars">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span id="music-label">Music: Off</span>
+      </button>
+    </header>
+
+    <!-- Hero / Landing Section -->
+    <main>
+      <section class="hero-section" id="hero-section">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-sparkle">✦</span>
+            <span id="hero-badge-text">A Special Celebration For You</span>
+          </div>
+
+          <h1 class="hero-title">
+            Happy Birthday,
+            <span id="recipient-name" class="hero-name-highlight">My Love</span>
+          </h1>
+
+          <p class="hero-subtitle" id="hero-subtitle">
+            A small digital sanctuary dedicated to you, the unforgettable memories we've shared, and every chapter waiting to be written.
+          </p>
+
+          <a href="#timeline-section" id="scroll-to-timeline" class="hero-cta interactive-hover">
+            <span>Explore Our Journey</span>
+            <span class="cta-icon">↓</span>
+          </a>
+        </div>
+
+        <div class="hero-scroll-indicator">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- Milestone Days Counter -->
+      <section class="counter-section" id="days-counter-section">
+        <div class="counter-card interactive-hover">
+          <div class="counter-number" id="days-count-number">0</div>
+          <div class="counter-label" id="days-count-label">Days of loving you and counting...</div>
+        </div>
+      </section>
+
+      <!-- Timeline of Us with Pictures -->
+      <section class="timeline-section" id="timeline-section">
+        <div class="section-header">
+          <span class="section-pretitle">The Story of Us</span>
+          <h2 class="section-title">Cherished Memories</h2>
+          <p class="section-desc">Every moment by your side is etched into my heart. Here are just a few of my favorite chapters.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-items" id="timeline-items">
+            <!-- Dynamically populated from js/config.js via js/timeline.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- The Letter at the End with 3D Opening Animation -->
+      <section class="letter-section" id="letter-section">
+        <div class="section-header">
+          <span class="section-pretitle">One Last Gift</span>
+          <h2 class="section-title">A Letter For You</h2>
+          <p class="section-desc">Some words can only be written straight from the heart. Click the wax seal to open.</p>
+        </div>
+
+        <div class="envelope-stage">
+          <!-- 3D Realistic Envelope -->
+          <div class="envelope-wrapper" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-pocket-left"></div>
+            <div class="envelope-pocket-right"></div>
+            <div class="envelope-pocket"></div>
+
+            <!-- Wax Seal Button -->
+            <button class="wax-seal interactive-hover" id="wax-seal" aria-label="Open birthday letter">
+              <span class="seal-pulse-hint">Click to Unseal ✦</span>
+              <span class="seal-emblem">♥</span>
+              <span class="seal-text">WITH LOVE</span>
+            </button>
+          </div>
+
+          <!-- Unfolded Letter Sheet (Slides out smoothly) -->
+          <div class="letter-sheet" id="letter-sheet">
+            <div class="letter-paper-texture">
+              <div class="letter-header">
+                <span class="letter-date" id="letter-date">Today & Always</span>
+                <span class="letter-monogram">✦ ✧ ✦</span>
+              </div>
+
+              <h3 class="letter-salutation" id="letter-salutation">To the most wonderful person in my world,</h3>
+
+              <div class="letter-body" id="letter-body">
+                <!-- Injected from config.js -->
+              </div>
+
+              <div class="letter-footer">
+                <div class="letter-closing" id="letter-closing">Forever & always yours,</div>
+                <div class="letter-author" id="letter-author">Your Love</div>
+                <div class="letter-ps" id="letter-ps"></div>
+              </div>
+
+              <div class="letter-actions">
+                <button class="wish-btn interactive-hover" id="make-wish-btn">
+                  <span>Make a Birthday Wish ✦</span>
+                </button>
+                <button class="reseal-btn interactive-hover" id="reseal-letter-btn">
+                  Fold Envelope
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>Crafted with <span class="footer-love">♥</span> for your special day • <span id="current-year">2026</span></p>
+    </footer>
+
+  </div>
+
+  <!-- Lightbox Photo Modal -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close interactive-hover" id="lightbox-close" aria-label="Close image">✕</button>
+      <div class="lightbox-media">
+        <img id="lightbox-img" src="" alt="Timeline memory view">
+      </div>
+      <div class="lightbox-caption">
+        <span class="lightbox-date" id="lightbox-date"></span>
+        <h4 class="lightbox-title" id="lightbox-title"></h4>
+        <p class="lightbox-desc" id="lightbox-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/letter.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
