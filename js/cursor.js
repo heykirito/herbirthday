@@ -13,12 +13,16 @@
   const ring = document.createElement('div');
   ring.className = 'custom-cursor-ring';
 
+  const glow = document.createElement('div');
+  glow.className = 'custom-cursor-glow';
+
   const trailContainer = document.createElement('div');
   trailContainer.className = 'cursor-trail-container';
 
   document.body.appendChild(trailContainer);
 
   if (!isTouch) {
+    document.body.appendChild(glow);
     document.body.appendChild(dot);
     document.body.appendChild(ring);
   }
@@ -27,6 +31,8 @@
   let mouseY = window.innerHeight / 2;
   let ringX = mouseX;
   let ringY = mouseY;
+  let glowX = mouseX;
+  let glowY = mouseY;
   let isHovered = false;
   let isClicking = false;
   let lastSpawn = 0;
@@ -122,12 +128,17 @@
     });
   }
 
-  // Smooth lerp loop for the outer ring
+  // Smooth lerp loop for the outer ring and glow
   function renderRing() {
     if (!isTouch) {
       ringX += (mouseX - ringX) * 0.18;
       ringY += (mouseY - ringY) * 0.18;
       ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
+
+      // Glow follows with slower, dreamier easing
+      glowX += (mouseX - glowX) * 0.08;
+      glowY += (mouseY - glowY) * 0.08;
+      glow.style.transform = `translate3d(${glowX}px, ${glowY}px, 0)`;
     }
     requestAnimationFrame(renderRing);
   }

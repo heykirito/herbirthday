@@ -136,6 +136,30 @@ body {
   background-color: rgba(216, 138, 142, 0.25);
 }
 
+/* Cursor Background Glow */
+.custom-cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 280px;
+  margin-top: -140px;
+  margin-left: -140px;
+  background: radial-gradient(
+    circle,
+    rgba(231, 168, 166, 0.18) 0%,
+    rgba(242, 196, 155, 0.12) 25%,
+    rgba(226, 142, 149, 0.06) 50%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 5;
+  filter: blur(20px);
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
 /* Trailing Sparkles */
 .cursor-trail-container {
   position: fixed;
