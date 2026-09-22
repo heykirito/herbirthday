@@ -13,9 +13,9 @@
     if (!config.counter || !config.counter.show || !counterContainer || !numberEl) return;
 
     const startDate = new Date(config.counter.startDate);
-    const today = new Date();
-    const diffTime = Math.abs(today - startDate);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const endDate = config.counter.endDate ? new Date(config.counter.endDate) : new Date();
+    const diffTime = Math.abs(endDate - startDate);
+    const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
 
     if (labelEl && config.counter.label) {
       labelEl.textContent = config.counter.label;
@@ -80,7 +80,7 @@
                   <span class="card-date">${item.date}</span>
                   ${item.tag ? `<span class="card-tag">${item.tag}</span>` : ''}
                 </div>
-                <h3 class="card-title">${item.title}</h3>
+                ${item.title ? `<h3 class="card-title">${item.title}</h3>` : ''}
                 <p class="card-desc">${item.description}</p>
                 ${item.location ? `
                   <div class="card-location">

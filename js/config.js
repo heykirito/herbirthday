@@ -7,71 +7,80 @@
  */
 
 window.BIRTHDAY_CONFIG = {
+  // Brand / Header
+  headerBrand: "our story till now",
+
   // Recipient details
   recipient: {
-    name: "My Love", // Replace with your girlfriend's name (e.g., "Sarah", "Emily", etc.)
+    name: "My Baccccchaa",
     nickname: "Beautiful",
     badge: "A Special Celebration For You",
     heroTitle: "Happy Birthday,",
     heroSubtitle: "A small digital sanctuary dedicated to you, the unforgettable memories we have shared, and every chapter waiting to be written.",
+    heroCta: "Us, From Start",
   },
 
   // Milestone Counter (Optional: counts days together or celebration days)
   counter: {
     show: true,
-    startDate: "2023-10-14", // Format: YYYY-MM-DD (e.g., anniversary date or date you met)
+    startDate: "2025-06-26", // Format: YYYY-MM-DD (26th June 2025)
+    endDate: "2026-09-27",   // Format: YYYY-MM-DD (27th September 2026 -> 458 days)
     label: "Days of loving you and counting...",
   },
+
+  // Timeline section description
+  timelineDesc: "Every moment by your side is etched into my heart and I remember every single one of them. Here are just a few of my favorite chapters.",
+
 
   // Timeline of Memories
   timeline: [
     {
-      date: "October 14, 2023",
-      title: "The Day Everything Began",
-      tag: "First Date",
-      description: "I still remember the butterflies before walking in. You wore that effortless smile, and within five minutes of talking, I knew you were someone rare and unforgettable.",
-      image: "images/memory1.jpg",
-      location: "That cozy corner cafe"
+      date: "June 26th - July 20th",
+      title: "You and me, became Us",
+      tag: "From First Chat to First Date",
+      description: "I still remember the cozy late night chats, the first meet outside ur office, me commenting that I'll catch if you fall and the first date, never thought while looking for something casual, I would find someone whom I'll start loving more than anything else.",
+      image: "images/image1.jpg",
+      location: "The First Pav Bhaji and Metro moment"
     },
     {
-      date: "December 24, 2023",
-      title: "Under the City Lights",
-      tag: "Winter Wonder",
-      description: "Cold winter air, warm cups of hot cocoa, and wandering through the glistening streets. You laughed at how terrible my jokes were, but you held my hand anyway.",
-      image: "images/memory2.jpg",
-      location: "Downtown City Square"
+      date: "16th August",
+      title: "Gf, no you are my wife",
+      tag: "No matter the amount of time, its never enough",
+      description: "The person who thought he'll never get married started seeing his wife in you, cute hi itni ho, just perfect for me. Life started feeling incomplete without, and for the first time. I found that life is more beautiful that it seemed before",
+      image: "images/image2.jpg",
+      location: "Somewhere"
     },
     {
-      date: "April 18, 2024",
-      title: "Our First Road Trip",
-      tag: "Ocean Breeze",
-      description: "Windows rolled all the way down, singing our favorite playlist completely out of tune. Watching the ocean breeze in your hair made time stand completely still.",
-      image: "images/memory3.jpg",
-      location: "Pacific Coast Highway"
+      date: "27th September",
+      title: "First Movie, on ur bday",
+      tag: "Movie",
+      description: "Sneaking out to reach the theater, lying at home just so I can meet you on your birthday, your leg on me showing I'm yours. Ofcourse I'm yours, completely.",
+      image: "images/image3.jpg",
+      location: "In the hall, ofcourse"
     },
     {
-      date: "July 30, 2024",
-      title: "The Quiet Rainy Sunday",
-      tag: "Ordinary Magic",
-      description: "No grand plans, no deadlines. Just messy morning coffee, quiet conversations, and discovering that the simplest days with you are the ones that mean the most.",
-      image: "images/memory4.jpg",
-      location: "Our favorite lazy spot"
+      date: "22nd March",
+      title: "With you, life is full of sukoon",
+      tag: "Day Out",
+      description: "A day out with you, and double date with V&S, best part, able to hold you in my hands all the time and being able to take care of you. Cutu sa patootu sa bacccccha",
+      image: "images/image4.jpg",
+      location: "EOD"
     },
     {
-      date: "November 12, 2024",
-      title: "Underneath a Thousand Stars",
-      tag: "Stargazing Night",
-      description: "Wrapped in blankets under the clear night sky, searching for shooting stars. I realized every wish I could possibly make was already sitting right next to me.",
-      image: "images/memory5.jpg",
-      location: "The hill overlooking the lights"
+      date: "3rd July",
+      title: "Our First Trip",
+      tag: "Trip",
+      description: "Our first trip, yay! I loved every second of it, because you were with me, all the time, holding my hand, showing how beautiful the world can be and yet, for me you were still more beautiful then the rest.",
+      image: "images/image5.jpg",
+      location: "Uttrakhand"
     },
     {
-      date: "Today & Forever",
+      date: "Today & Always",
       title: "Celebrating You",
       tag: "Happy Birthday",
-      description: "Another year more radiant, more resilient, and more deeply cherished. You make the world infinitely softer and brighter just by being in it.",
-      image: "images/memory6.jpg",
-      location: "Right here with you"
+      description: "Happy Birthday My Love, and I wish there are infinity more, I'll be with you, always, holding your hands, keeping ur head on my shoulders, making you sleep and ofcourse making you eat a lots, meri cutie",
+      image: "images/image6.jpg",
+      location: "Right here with you, always"
     }
   ],
 
