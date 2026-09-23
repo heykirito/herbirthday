@@ -4,7 +4,7 @@
 
 /* --- Custom Variables & Theme --- */
 :root {
-  --bg-primary: #FAF7F2;
+  --bg-primary: #F6F1EB;
   --bg-card: rgba(255, 255, 255, 0.88);
   --bg-card-hover: rgba(255, 255, 255, 0.98);
   --text-primary: #2B2421;
@@ -29,6 +29,26 @@
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* --- Dark Mode Theme (Romantic Twilight) --- */
+[data-theme="dark"] {
+  --bg-primary: #141014;
+  --bg-card: rgba(26, 20, 25, 0.88);
+  --bg-card-hover: rgba(36, 28, 35, 0.98);
+  --text-primary: #FDF7F4;
+  --text-secondary: #C8BCBA;
+  --text-muted: #968684;
+  --accent-rose: #E5989B;
+  --accent-blush: #3D262C;
+  --accent-gold: #DEB887;
+  --accent-burgundy: #D86B77;
+  --accent-wax: #A83242;
+  --border-subtle: rgba(229, 152, 155, 0.24);
+  --border-light: rgba(255, 255, 255, 0.08);
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.65);
+}
+
 /* --- Base & Reset --- */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -42,6 +62,7 @@ html {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 body {
@@ -235,11 +256,17 @@ body {
   50% { transform: scale(1.22); }
 }
 
-.music-control-btn {
+.header-actions {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: rgba(255, 255, 255, 0.85);
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   padding: 0.55rem 1.15rem;
   border-radius: 999px;
@@ -249,13 +276,26 @@ body {
   color: var(--text-secondary);
   box-shadow: var(--shadow-sm);
   transition: var(--transition-smooth);
+  cursor: pointer;
+  user-select: none;
 }
 
-.music-control-btn:hover {
-  background: #FFFFFF;
+.header-btn:hover {
+  background: var(--bg-card-hover);
   border-color: var(--accent-rose);
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
+  color: var(--text-primary);
+}
+
+.theme-icon {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.music-control-btn {
+  /* Inherits .header-btn base */
+  gap: 0.75rem;
 }
 
 .music-bars {
@@ -1276,3 +1316,166 @@ body {
     font-size: 2.8rem;
   }
 }
+
+/* ==========================================================================
+   DARK THEME COMPONENT STYLES & OVERRIDES (Romantic Twilight Mode)
+   ========================================================================== */
+[data-theme="dark"] .site-header {
+  background: rgba(20, 16, 20, 0.85);
+  border-bottom: 1px solid rgba(229, 152, 155, 0.15);
+}
+
+[data-theme="dark"] .hero-badge {
+  background: rgba(34, 26, 32, 0.85);
+  border-color: rgba(229, 152, 155, 0.25);
+  color: var(--accent-rose);
+}
+
+[data-theme="dark"] .hero-name-highlight {
+  background: linear-gradient(135deg, #F8A5AC 20%, #E29578 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="dark"] .hero-cta {
+  background: linear-gradient(135deg, #E5989B 0%, #D4A373 100%);
+  color: #141014;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(229, 152, 155, 0.28);
+}
+
+[data-theme="dark"] .hero-cta:hover {
+  background: linear-gradient(135deg, #F2A8AC 0%, #E0B085 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(229, 152, 155, 0.42);
+}
+
+[data-theme="dark"] .counter-card {
+  background: rgba(28, 21, 26, 0.85);
+  border-color: rgba(229, 152, 155, 0.22);
+}
+
+[data-theme="dark"] .counter-number {
+  color: var(--accent-rose);
+  text-shadow: 0 0 25px rgba(229, 152, 155, 0.35);
+}
+
+[data-theme="dark"] .timeline-card {
+  background: #1C151A;
+  border-color: rgba(229, 152, 155, 0.16);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="dark"] .timeline-card:hover {
+  border-color: var(--accent-rose);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(229, 152, 155, 0.18);
+}
+
+[data-theme="dark"] .photo-wrapper {
+  background-color: #271E24;
+}
+
+[data-theme="dark"] .card-tag {
+  background: #281D24;
+  color: var(--accent-rose);
+}
+
+[data-theme="dark"] .view-pill {
+  background: rgba(28, 21, 26, 0.95);
+  color: var(--text-primary);
+  border: 1px solid rgba(229, 152, 155, 0.28);
+}
+
+[data-theme="dark"] .marker-dot {
+  background-color: var(--accent-rose);
+  border-color: #141014;
+  box-shadow: 0 0 12px rgba(229, 152, 155, 0.8);
+}
+
+[data-theme="dark"] .envelope-wrapper {
+  background: #251B21;
+  box-shadow: var(--shadow-lg), 0 35px 70px rgba(0, 0, 0, 0.65);
+}
+
+[data-theme="dark"] .envelope-flap {
+  background: #2D2027;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .envelope-pocket {
+  background: linear-gradient(180deg, #2B1E25 0%, #1D141A 100%);
+  box-shadow: inset 0 -2px 10px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .envelope-pocket-left {
+  background: #241920;
+}
+
+[data-theme="dark"] .envelope-pocket-right {
+  background: #21161D;
+}
+
+[data-theme="dark"] .seal-pulse-hint {
+  background: rgba(38, 28, 34, 0.95);
+  color: var(--text-primary);
+  border-color: rgba(229, 152, 155, 0.35);
+}
+
+[data-theme="dark"] .letter-sheet {
+  background: #1C151B;
+  border-color: rgba(229, 152, 155, 0.25);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.75), 0 0 35px rgba(229, 152, 155, 0.09);
+}
+
+[data-theme="dark"] .reseal-btn {
+  background: rgba(34, 25, 31, 0.8);
+  border-color: rgba(229, 152, 155, 0.2);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .reseal-btn:hover {
+  background: #2C1F28;
+  border-color: var(--accent-rose);
+  color: var(--accent-rose);
+}
+
+[data-theme="dark"] .lightbox-container {
+  background: #1C151B;
+  border: 1px solid rgba(229, 152, 155, 0.25);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85), 0 0 45px rgba(229, 152, 155, 0.12);
+}
+
+[data-theme="dark"] .lightbox-close {
+  background: rgba(38, 28, 34, 0.9);
+  color: var(--text-primary);
+  border: 1px solid rgba(229, 152, 155, 0.25);
+}
+
+[data-theme="dark"] .lightbox-close:hover {
+  background: #3A2A35;
+}
+
+[data-theme="dark"] .custom-cursor-glow {
+  background: radial-gradient(
+    circle,
+    rgba(229, 152, 155, 0.24) 0%,
+    rgba(222, 184, 135, 0.16) 30%,
+    rgba(216, 107, 119, 0.08) 55%,
+    transparent 70%
+  );
+}
+
+@media (max-width: 540px) {
+  .site-header {
+    padding: 1rem 1.2rem;
+  }
+  .theme-toggle-btn #theme-label,
+  .music-control-btn #music-label {
+    display: none;
+  }
+  .header-btn {
+    padding: 0.5rem 0.75rem;
+  }
+}
+

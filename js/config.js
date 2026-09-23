@@ -10,6 +10,11 @@ window.BIRTHDAY_CONFIG = {
   // Brand / Header
   headerBrand: "our story till now",
 
+  // Theme Appearance
+  theme: {
+    default: "dark", // 'dark' (Romantic Twilight Mode) or 'light' (Warm Cream)
+  },
+
   // Recipient details
   recipient: {
     name: "My Baccccchaa",

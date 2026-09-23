@@ -14,8 +14,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Theme Initialization (Prevents flash of bright light) -->
+  <script>
+    (function () {
+      try {
+        const saved = localStorage.getItem('birthday_theme');
+        document.documentElement.setAttribute('data-theme', saved || 'dark');
+      } catch (e) {}
+    })();
+  </script>
+
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=1.3">
 </head>
 <body>
 
@@ -34,15 +44,23 @@
         <span id="header-brand-text">our story till now</span>
       </a>
 
-      <!-- Ambient Audio Controller -->
-      <button id="music-toggle" class="music-control-btn" aria-label="Toggle ambient music">
-        <div class="music-bars">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <span id="music-label">Music: Off</span>
-      </button>
+      <div class="header-actions">
+        <!-- Theme Toggle (Night / Day) -->
+        <button id="theme-toggle" class="header-btn theme-toggle-btn interactive-hover" aria-label="Toggle theme mode">
+          <span class="theme-icon" id="theme-icon">🌙</span>
+          <span id="theme-label">Night</span>
+        </button>
+
+        <!-- Ambient Audio Controller -->
+        <button id="music-toggle" class="header-btn music-control-btn interactive-hover" aria-label="Toggle ambient music">
+          <div class="music-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span id="music-label">Music: Off</span>
+        </button>
+      </div>
     </header>
 
     <!-- Hero / Landing Section -->
@@ -180,12 +198,12 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/config.js?v=1.2"></script>
-  <script src="js/background.js?v=1.2"></script>
-  <script src="js/cursor.js?v=1.2"></script>
-  <script src="js/audio.js?v=1.2"></script>
-  <script src="js/timeline.js?v=1.2"></script>
-  <script src="js/letter.js?v=1.2"></script>
-  <script src="js/main.js?v=1.2"></script>
+  <script src="js/config.js?v=1.3"></script>
+  <script src="js/background.js?v=1.3"></script>
+  <script src="js/cursor.js?v=1.3"></script>
+  <script src="js/audio.js?v=1.3"></script>
+  <script src="js/timeline.js?v=1.3"></script>
+  <script src="js/letter.js?v=1.3"></script>
+  <script src="js/main.js?v=1.3"></script>
 </body>
 </html>

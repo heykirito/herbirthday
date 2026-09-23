@@ -48,6 +48,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Theme Toggle Controller (Romantic Night / Warm Day)
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  const themeLabel = document.getElementById('theme-label');
+
+  function updateThemeUI(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (themeIcon && themeLabel) {
+      if (theme === 'dark') {
+        themeIcon.textContent = '☀️';
+        themeLabel.textContent = 'Day';
+        themeToggle?.setAttribute('aria-label', 'Switch to day mode');
+      } else {
+        themeIcon.textContent = '🌙';
+        themeLabel.textContent = 'Night';
+        themeToggle?.setAttribute('aria-label', 'Switch to night mode');
+      }
+    }
+  }
+
+  const initialTheme = document.documentElement.getAttribute('data-theme') || config.theme?.default || 'dark';
+  updateThemeUI(initialTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const activeTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      updateThemeUI(activeTheme);
+      try {
+        localStorage.setItem('birthday_theme', activeTheme);
+      } catch (err) {}
+    });
+  }
+
   // Audio Toggle Button
   const musicToggle = document.getElementById('music-toggle');
   if (musicToggle && window.BirthdayAudio) {
