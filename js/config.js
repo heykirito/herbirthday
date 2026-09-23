@@ -94,16 +94,17 @@ window.BIRTHDAY_CONFIG = {
     envelopeTag: "Open when you're ready",
     sealText: "WITH LOVE",
     date: "Today & Always",
-    salutation: "To the most wonderful person in my world,",
+    salutation: "To the most incredible person in my world,",
     paragraphs: [
       "Happy Birthday to my cutie, patootie, sweetie pie, Kaju Katli💕",
-      "You bring an effortless warmth into every room you step into. The kindness you show to everyone, your sharp wit, your passion, and that radiant smile of yours never fail to amaze me. You make even the ordinary days feel like poetry.",
-      "Thank you for being my confidante, my biggest supporter, and my favorite adventure partner. Through all the highs, the quiet moments, and everything in between, being by your side is my greatest privilege.",
-      "As you blow out your candles this year, I hope you take a moment to see yourself the way I see you: brilliant, graceful, endlessly capable, and deserving of all the joy this universe has to offer.",
-      "I hope every dream you've been nurturing starts to bloom this year. I'll be right beside you, cheering the loudest."
+      "I wish you many many many many many happy returns of the day and I wish next time I could be with you, standing with you while you cut the cake and then I'll put it on your face😙",
+      "I hope your each and every wish comes true, jo chahe wo mile, you already shines like a sun and makes my life brighter every single day. Yes, a day without you, will feel like darkness.",
+      "I hope you take a moment to see yourself the way I see you: brilliant, graceful, endlessly capable, and deserving of all the joy this universe has to offer and me, trying my best to make sure I can give you all the love you want, like a villain.",
+      "I hope every dream you've been nurturing starts to bloom this year. I'll be right beside you, cheering the loudest. with ur hand in mine, to not let you fall and cheer you on",
+      "I payal you, Happy Birthday again my love"
     ],
     closing: "Forever & always yours,",
-    author: "Your Favorite Person",
+    author: "Motu aka Laksh",
     postscript: "P.S. Make a wish before you close this letter — you deserve it all."
   },
 
@@ -111,7 +112,7 @@ window.BIRTHDAY_CONFIG = {
   music: {
     // If you have a custom mp3 file, put its URL or local path here (e.g., 'audio/our-song.mp3')
     // If empty, it automatically plays a gentle, procedurally-generated romantic piano lullaby!
-    customAudioUrl: "",
+    customAudioUrl: "audio/our-song.mp3",
     autoplayPrompt: "Tap anywhere for ambient piano music ♫",
   }
 };
