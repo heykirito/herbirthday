@@ -96,7 +96,7 @@ window.BIRTHDAY_CONFIG = {
     date: "Today & Always",
     salutation: "To the most wonderful person in my world,",
     paragraphs: [
-      "Happy Birthday! Today, I want to pause everything for a moment just to remind you how deeply special, cherished, and admired you are.",
+      "Happy Birthday to my cutie, patootie, sweetie pie, Kaju Katli💕",
       "You bring an effortless warmth into every room you step into. The kindness you show to everyone, your sharp wit, your passion, and that radiant smile of yours never fail to amaze me. You make even the ordinary days feel like poetry.",
       "Thank you for being my confidante, my biggest supporter, and my favorite adventure partner. Through all the highs, the quiet moments, and everything in between, being by your side is my greatest privilege.",
       "As you blow out your candles this year, I hope you take a moment to see yourself the way I see you: brilliant, graceful, endlessly capable, and deserving of all the joy this universe has to offer.",
