@@ -17,11 +17,11 @@ window.BIRTHDAY_CONFIG = {
 
   // Recipient details
   recipient: {
-    name: "My Baccccchaa",
+    name: "My Payal Bacccha",
     nickname: "Beautiful",
     badge: "A Special Celebration For You",
     heroTitle: "Happy Birthday,",
-    heroSubtitle: "A small digital sanctuary dedicated to you, the unforgettable memories we have shared, and every chapter waiting to be written.",
+    heroSubtitle: "A small gift dedicated to you, the unforgettable memories we have shared, and aage or bhi ayenge :).",
     heroCta: "Us, From Start",
   },
 
@@ -98,10 +98,15 @@ window.BIRTHDAY_CONFIG = {
     paragraphs: [
       "Happy Birthday to my cutie, patootie, sweetie pie, Kaju Katli💕",
       "I wish you many many many many many happy returns of the day and I wish next time I could be with you, standing with you while you cut the cake and then I'll put it on your face😙",
-      "I hope your each and every wish comes true, jo chahe wo mile, you already shines like a sun and makes my life brighter every single day. Yes, a day without you, will feel like darkness.",
+      "I hope your each and every wish comes true, jo chahe wo mile, you already shines like a sun and makes my life brighter every single day. Yes, a day without you, nope, I don't wanna know",
       "I hope you take a moment to see yourself the way I see you: brilliant, graceful, endlessly capable, and deserving of all the joy this universe has to offer and me, trying my best to make sure I can give you all the love you want, like a villain.",
-      "I hope every dream you've been nurturing starts to bloom this year. I'll be right beside you, cheering the loudest. with ur hand in mine, to not let you fall and cheer you on",
-      "I payal you, Happy Birthday again my love"
+      "Tujhpe saje khoobsurat lage<br>Aisa kya doon tujhe<br>Aisa kya doon tujhe",
+
+      "Mmm, hathon ki ye lakeerein sabhi<br>Pehna doon tujhe<br>Pehna doon tujhe",
+
+      "Jab tak meri aankhein<br>Tera chehra pee na lein<br>Jab tak teri dhun mein<br>Hum mar na lein, jee na lein",
+
+      "Haan mere paas tum raho<br>Jaane ki baat na karo<br>Mere saath tum raho<br>Jaane ki baat na karo",
     ],
     closing: "Forever & always yours,",
     author: "Motu aka Laksh",
