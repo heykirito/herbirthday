@@ -22,7 +22,7 @@ window.BIRTHDAY_CONFIG = {
     badge: "A Special Celebration For You",
     heroTitle: "Happy Birthday,",
     heroSubtitle: "A small gift dedicated to you, the unforgettable memories we have shared, and aage or bhi ayenge :).",
-    heroCta: "Us, From Start",
+    heroCta: "Us, From Start, scroll please",
   },
 
   // Milestone Counter (Optional: counts days together or celebration days)
@@ -100,6 +100,7 @@ window.BIRTHDAY_CONFIG = {
       "I wish you many many many many many happy returns of the day and I wish next time I could be with you, standing with you while you cut the cake and then I'll put it on your face😙",
       "I hope your each and every wish comes true, jo chahe wo mile, you already shines like a sun and makes my life brighter every single day. Yes, a day without you, nope, I don't wanna know",
       "I hope you take a moment to see yourself the way I see you: brilliant, graceful, endlessly capable, and deserving of all the joy this universe has to offer and me, trying my best to make sure I can give you all the love you want, like a villain.",
+      "A few lines of song dedicated for your birthday",
       "Tujhpe saje khoobsurat lage<br>Aisa kya doon tujhe<br>Aisa kya doon tujhe",
 
       "Mmm, hathon ki ye lakeerein sabhi<br>Pehna doon tujhe<br>Pehna doon tujhe",

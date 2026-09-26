@@ -161,11 +161,40 @@ window.BirthdayAudio = (function () {
 
   // Auto-init listener on user interaction
   function initUserInteractionHook() {
+    let hasStarted = false;
+
     const startOnce = () => {
+      if (hasStarted) return;
+      hasStarted = true;
       window.removeEventListener('click', startOnce);
       window.removeEventListener('touchstart', startOnce);
-      // Optional subtle prompt or start if user clicked music button
+      start();
     };
+
+    // Try to autoplay after 5 seconds
+    setTimeout(() => {
+      if (hasStarted) return;
+
+      const config = window.BIRTHDAY_CONFIG?.music;
+      if (config?.customAudioUrl) {
+        const testAudio = new Audio(config.customAudioUrl);
+        testAudio.volume = 0.5;
+        testAudio.play().then(() => {
+          // Autoplay worked - use this audio element
+          hasStarted = true;
+          customAudioEl = testAudio;
+          customAudioEl.loop = true;
+          isPlaying = true;
+          updateUI();
+          window.removeEventListener('click', startOnce);
+          window.removeEventListener('touchstart', startOnce);
+        }).catch(() => {
+          // Autoplay blocked - wait for user interaction
+          testAudio.remove();
+        });
+      }
+    }, 5000);
+
     window.addEventListener('click', startOnce, { once: true });
     window.addEventListener('touchstart', startOnce, { once: true });
   }
